@@ -11,7 +11,13 @@
     "skipLibCheck": false, // ライブラリの型チェックをスキップしない
     "sourceMap": true, // ソースマップを生成します
     "strict": true, // 厳格な型チェックを有効にします
-    "allowArbitraryExtensions": true // 任意の拡張子を許可します
+    "allowArbitraryExtensions": true, // 任意の拡張子を許可します
+    "baseUrl": ".", // ベースURLを設定します
+    "paths": {
+      "@content/*": ["src/content/*"],
+      "@popup/*": ["src/popup/*"],
+      "@common/*": ["src/common/*"]
+    }
   },
   "exclude": ["dist"] // distフォルダは検査対象外
 }

@@ -14,11 +14,19 @@ console.log("'popup/script.js'を出力しました");
 
 await esbuild.build({
   bundle: true,
-  entryPoints: [`${srcPath}/content/onload.ts`],
-  outfile: `${distPath}/content/onload.js`,
+  entryPoints: [`${srcPath}/content/index.ts`],
+  outfile: `${distPath}/content/index.js`,
   // minify: true,
 });
-console.log("'content/onload.js'を出力しました");
+console.log("'content/index.js'を出力しました");
+
+await esbuild.build({
+  bundle: true,
+  entryPoints: [`${srcPath}/background/index.ts`],
+  outfile: `${distPath}/background/index.js`,
+  // minify: true,
+});
+console.log("'background/index.js'を出力しました");
 
 // ファイルとフォルダのコピー処理
 await fs.copyFile(
