@@ -10,17 +10,24 @@ async function init() {
 
   if (tabName) tabName.innerText = (await getTab())[0].title || "-";
 
-  btn!.onclick = () => {
-    chrome.runtime.sendMessage({ name: "displayUrl:background" });
+  btn!.onclick = async () => {
+    await chrome.runtime.sendMessage(
+      {
+        name: "displayUrl:background",
+      },
+      (res) => {
+        console.log(`popup: ${JSON.stringify(res)}`);
+
+        const links = res.links as string[];
+
+        links.forEach((link) => {
+          const li = document.createElement("li");
+          li.innerText = link;
+          linkUl?.appendChild(li);
+        });
+      }
+    );
   };
-
-  const links = (await store.getValue<string[]>("links", "session")) || [];
-
-  links.forEach((link) => {
-    const li = document.createElement("li");
-    li.innerText = link;
-    linkUl?.appendChild(li);
-  });
 }
 
 init();
