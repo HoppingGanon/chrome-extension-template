@@ -1,6 +1,6 @@
 export class Utils {
   async init() {
-    const tabPromise = new Promise((resolve) => {
+    await new Promise((resolve) => {
       chrome.tabs.query({ active: true, currentWindow: true }, (tab) => {
         resolve(tab);
       });

@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "ES2020",
+    "lib": ["ES2020", "DOM"], // 必要なライブラリを指定します
+    "outDir": "./build", // 出力ディレクトリを指定します
+    "moduleResolution": "node",
+    "allowJs": true, // JavaScriptファイルを許可します
+    "checkJs": false, // JavaScriptファイルも型チェックします
+    "esModuleInterop": true, // ESモジュールの互換性を有効にします
+    "forceConsistentCasingInFileNames": true, // ファイル名の大文字小文字の一貫性を強制します
+    "skipLibCheck": false, // ライブラリの型チェックをスキップしない
+    "sourceMap": true, // ソースマップを生成します
+    "strict": true, // 厳格な型チェックを有効にします
+    "allowArbitraryExtensions": true // 任意の拡張子を許可します
+  },
+  "exclude": ["dist"] // distフォルダは検査対象外
+}
