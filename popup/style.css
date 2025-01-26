@@ -1,0 +1,10 @@
+div.root-card {
+  min-width: 128px;
+}
+
+button.test-button {
+  background-color: aqua;
+  padding: 4px;
+  border-radius: 4px;
+  border: grey 1px solid;
+}
