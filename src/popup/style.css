@@ -2,7 +2,7 @@ div.root-card {
   min-width: 160px;
 }
 
-button.test-button {
+button.load-button {
   background-color: aqua;
   padding: 4px;
   border-radius: 4px;

@@ -4,7 +4,7 @@ import { getTab } from "@common/utils";
 async function init() {
   const store = useStore();
 
-  const btn = document.querySelector<HTMLElement>("button.test-button");
+  const btn = document.querySelector<HTMLElement>("button.load-button");
   const linkUl = document.querySelector("ul.link-list");
   const tabName = document.querySelector<HTMLSpanElement>("span.tab-name");
 
