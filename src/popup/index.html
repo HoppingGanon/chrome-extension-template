@@ -13,11 +13,24 @@
   </head>
   <body>
     <div class="root-card p-2">
-      <div class="font-bold">
-        <span class="tab-name"></span>
+      <div class="py-1">
+        <span class="tab-name font-bold"></span>
       </div>
-      <button class="load-button btn">読み込み</button>
-      <button class="exec-button btn btn-primary">同時に開く</button>
+      <div class="py-1">
+        <button class="load-button btn">読み込み</button>
+      </div>
+      <div class="flex py-1">
+        <select
+          class="load-count select select-bordered w-full max-w-xs mx-1 hidden"
+        >
+          <option value="5" selected>5件</option>
+          <option value="10">10件</option>
+          <option value="15">15件</option>
+          <option value="20">20件</option>
+        </select>
+
+        <button class="exec-button btn btn-primary mx-1 hidden">開く</button>
+      </div>
       <script src="script.js" defer></script>
     </div>
     <div class="link-list"></div>
