@@ -4,16 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="../libs/daisyui@4.12.23.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="../libs/tailwind@3.4.16.min.css"></script>
   </head>
   <body>
     <div class="root-card p-2">
-      <h3>
+      <div class="font-bold">
         <span class="tab-name"></span>
-      </h3>
-      <p class="border">Hello, world</p>
-      <button class="load-button">読み込み</button>
+      </div>
+      <button class="load-button btn">読み込み</button>
+      <button class="exec-button btn btn-primary">同時に開く</button>
       <script src="script.js" defer></script>
     </div>
-    <ul class="link-list"></ul>
+    <div class="link-list"></div>
   </body>
 </html>
