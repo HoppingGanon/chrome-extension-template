@@ -38,6 +38,14 @@ console.log("'popup/index.html'をコピーしました");
 await fs.copyFile(`${srcPath}/popup/style.css`, `${distPath}/popup/style.css`);
 console.log("'popup/style.css'をコピーしました");
 
+try {
+  await fs.access(`${distPath}/libs`);
+} catch {
+  await fs.mkdir(`${distPath}/libs`, { recursive: true });
+}
+await fs.cp(`${process.cwd()}/libs`, `${distPath}/libs`, { recursive: true });
+console.log("'libs'フォルダをコピーしました");
+
 await fs.copyFile(`${srcPath}/manifest.json`, `${distPath}/manifest.json`);
 console.log("'manifest.json'をコピーしました");
 
